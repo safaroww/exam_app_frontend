@@ -1,0 +1,147 @@
+@mixin tsp-input($width, $height, $padding: 5px) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+
+.IndexInput {
+    @include tsp-input(40px, 40px, );
+    text-align: center;
+}
+
+.ContentInput {
+    @include tsp-input(80%, auto, );
+    resize: none;    
+}
+
+.OptionTextInput {
+    @include tsp-input(100%, auto,)
+}
+
+.Accept {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.Delete {
+    position: absolute;
+    top: -360px;
+    right: 20px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.EditQuestion {
+    background-color: aliceblue;
+    width: 650px;
+    color: black;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 25px;
+
+
+    * {
+        outline: none;
+    }
+
+    .Index{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        $size: 40px;
+        width: $size;
+        height: $size;
+        background-color: rgb(200, 200, 200);
+        border-radius: 50%;
+        .IndexValue{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .Content{
+        padding-left: 40px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .Options{
+        .Option{
+            width: 100%;
+            background-color: rgb(220, 220, 220);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            transition-duration: 300ms;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            height: 60px;
+            &:hover{
+                background-color: darken(rgba(220, 220, 220, 0.674), 20%);
+            }
+
+
+            .OptionText {
+                flex-grow: 1;
+            }
+            .OptionCheckDiv {
+                .OptionCheck {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .DeleteOption {
+                width: 25px;
+                cursor: pointer;    
+            }
+        }
+        .OptionCorrect {
+            background-color: greenyellow;
+            &:hover{
+                background-color: darken(greenyellow, 20%);
+            }
+        }
+        .OptionWrong {
+            background-color: rgb(216, 65, 65);
+            &:hover{
+                background-color: darken(rgb(216, 65, 65), 20%);
+            }
+
+
+            
+        }
+
+        .AddOption {
+            width: 50%;
+            padding: 10px;
+            background-color: yellowgreen;
+            margin: auto;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition-duration: 300ms;
+            &:hover {
+                background-color: lighten(yellowgreen, 10%);
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,17 @@
+.AddQuestion {
+    $size: 70px;
+    $bgcolor: rgba(0, 0, 255, 0.654);
+    width: $size;
+    height: $size;
+    background-color: $bgcolor;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+    transition-duration: 300ms;
+    &:hover {
+        background-color: lighten($bgcolor, 10%);
+    }
+}

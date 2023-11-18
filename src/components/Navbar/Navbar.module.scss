@@ -1,0 +1,27 @@
+.Navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.List{
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+    display: flex;
+    column-gap: 10px;
+    .Item{
+        list-style: none;
+        flex-grow: 1;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition-duration: 300ms;
+    }
+    .ItemSelected{
+        @extend .Item;
+        background-color: white;
+        color: rgb(44, 44, 44);
+    }
+}
